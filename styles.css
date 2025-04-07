@@ -14,6 +14,18 @@ body {
     color: #fff;
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    right: 15px;
+    display: flex;
+    column-gap: 5px;
+}
+
+nav a:hover {
+    color: rgb(251, 251, 252);
+}
+
 header, footer {
     text-align: center;
 }
