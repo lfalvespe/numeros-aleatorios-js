@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Números Aleatórios</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Gerador de Números Aleatórios</h1>
+    </header>
+
+    <div class="form-container">
+      <form action="">
+        <div class="form-control">
+          <label for="min"> Intervalo: </label>
+          <input
+            type="number"
+            id="min"
+            name="min"
+            value="0"
+            placeholder="mín"
+            required
+          />
+          -
+          <input type="number" id="max" value="10" placeholder="máx" required />
+        </div>
+        <div class="form-control">
+          <label for="qtd">Qtd de Valores:</label>
+          <input type="number" id="qtd" name="qtd" value="5" required />
+        </div>
+        <div class="check-control">
+          <label for="repeated">Permitir duplicados:</label>
+          <input type="checkbox" id="repeated" name="repeated" />
+        </div>
+        <div class="actions">
+          <input type="submit" id="generate-btn" value="Gerar" />
+          <input type="button" id="reset-btn" value="Limpar" />
+        </div>
+      </form>
+    </div>
+
+    <div id="res-legend">Resultado:</div>
+    <div class="res-container">
+      <span class="brackets gray"> [ </span>
+      <span id="result"></span>
+      <span class="brackets gray"> ] </span>
+    </div>
+
+    <footer>
+      <p>
+        <img id="logo-author" src="/images/logo.png" alt="" width="40px" />
+        &nbsp;Created by <span className="author">Fernando Alves</span>
+      </p>
+      <p>
+        <img id="logo-mail" src="/images/gmail.png" alt="" width="20px" />
+        &nbsp;<a href="mailto:lfalvespe@gmail.com">lfalvespe@gmail.com</a>
+      </p>
+      <p>
+        <img id="logo-github" src="/images/github.png" alt="" width="20px" />
+        &nbsp;<a href="https://github.com/lfalvespe" target="_blank">Github</a>
+      </p>
+      <p>&copy; 2025</p>
+    </footer>
+  </body>
+</html>
