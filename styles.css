@@ -25,7 +25,6 @@ nav {
 nav a {
     padding: 3px 5px;
     text-align: center;
-    background-color: yellow;
 }
 
 nav a:hover {
