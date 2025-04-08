@@ -33,12 +33,11 @@ generateBtn.addEventListener("click", (e) => {
   const max = Number(document.querySelector("#max").value);
   const repeat = document.querySelector("#repeated").checked;
 
+  max === 0 && (res.innerHTML = "Informe o valor máximo");
+  qtd === 0 && (res.innerHTML = "Informe a qtd de valores");
+  max < min && (res.innerHTML = "máx deve ser maior que mín");
 
-  max === 0 && (res.innerHTML = "Informe o valor máximo")
-  qtd === 0 && (res.innerHTML = "Informe a qtd de valores")
-  max < min && (res.innerHTML = "máx deve ser maior que mín")
-
-  if ((qtd != 0) && (max != 0) && (max > min)) {
+  if (qtd != 0 && max != 0 && max > min) {
     repeat ? generateDuplicates() : generateUniques();
 
     function generateDuplicates() {
@@ -57,15 +56,9 @@ generateBtn.addEventListener("click", (e) => {
     }
   }
 
-  resArray.length > 0 &&
-    resArray.map((e) => {
-      e == resArray[resArray.length - 1]
-        ? (res.innerHTML += `${e} `)
-        : (res.innerHTML += `${e}, `);
-    });
-
-    let brackets = document.querySelectorAll(".brackets");
-    brackets.forEach((b) => b.classList.remove("gray"));
+  res.innerHTML = resArray;
+  let brackets = document.querySelectorAll(".brackets");
+  brackets.forEach((b) => b.classList.remove("gray"));
 
   console.log(resArray);
 });
